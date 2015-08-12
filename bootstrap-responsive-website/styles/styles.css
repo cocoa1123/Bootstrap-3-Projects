@@ -1,0 +1,32 @@
+	
+	.jumbotron {
+		background: rgba(51,173,255,0.3);
+	}
+	
+	#sidebar-wrapper {
+		border-left: 2px solid #dae5e8;
+		border-right: 2px solid #dae5e8;
+	}
+	
+	.list-inline > li > a{
+		color: inherit;
+		text-decoration: none;
+	}
+		.list-inline > li > #facebook:hover {
+			color: #3b5998;
+		}
+		.list-inline > li > #github:hover {
+			color: black;
+		}
+		.list-inline > li > #linkedin:hover {
+			color: #007bb6;
+		}
+		.list-inline > li > #google:hover {
+			color: #dd4b39
+		}
+		
+	#socialIcons {
+		margin-top: 30px;
+		padding-top: 40px;
+	}
+	

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Web Page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!---- Bootstrap 3 ---->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!---- Font Awesome ---->
+		<link rel="stylesheet" href="styles/styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+</head>
+    
+<body>
+
+<!--------- Navigation panel ---------->
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="navbar">
+				<ul class="nav nav-pills navbar-inverse navbar-fixed-top">
+					<li class="active"><a href="#" class="glyphicon glyphicon-home"><span class="sr-only">(current)</span></a></li>
+					<li>
+						<a href="#">Link</a>
+					</li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					  Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						  </ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role='button' aria-haspopup='true'>
+						Beaches 
+						<span class="caret"></span></a>
+					
+						<ul class="dropdown-menu">
+							<li class='dropdown-header'>The Best Beaches</li>
+							<li><a href="#">Chalkidiki</a></li>
+							<li><a href="#">Thassos</a></li>
+							<li><a href="#">Crete</a></li>
+							<li><a href="#">Mexico</a></li>
+							<li><a href="#">Bora Bora</a></li>
+							<li><a href="#">Maldives</a></li>
+							<li><a href="#">Thailand</a></li>
+							<li><a href="#">Malta</a></li>
+							<li><a href="#">Sicily</a></li>
+						</ul>
+					</li>
+					
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+						  <input type="text" class="form-control" placeholder="Search" /> 
+							<button type="submit" class="btn btn-default">Submit</button>
+						</div>
+					</form>
+				</ul>
+		
+			<!--------- Wrapper For Slides ---------->
+			<div id="my-slider" class="carousel slide" data-ride="carousel">
+			
+			<!-- Indicators dot nav -->
+			<ol class="carousel-indicators">
+				<li data-target="#my-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#my-slider" data-slide-to="1"></li>
+				<li data-target="#my-slider" data-slide-to="2"></li>
+			</ol>
+			
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="images/thassos-pano.jpg" alt="golden-beach-1" class="img-responsive"/>
+				</div>
+				<div class="item">
+					<img src="images/pano_20140819.jpg" alt="golden-beach-2" class="img-responsive"/>
+				</div>
+				<div class="item">
+					<img src="images/panorama_20140915.jpg" alt="lido-di-jesolo" class="img-responsive"/>
+				</div>
+			</div>
+				
+			<!-- Next and Previous Buttons -->
+			<a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+			</div>
+			</nav>
+		</div>
+	</div>
+	
+<!---------- Main Content ---------->
+	
+<div class="container">
+    <div class="row">
+		<div class="jumbotron col-xs-12 col-md-10">
+			<h2 class="page-header"> This is an example of responsive Web Page. <small>Built with Bootstrap 3</small></h2>
+				<p> This Website shows some interesting places to visit! </p>
+		</div>
+		
+		<!------ Sidebar ------>
+		
+		<div class="col-xs-6 col-md-2">
+			<div id="sidebar-wrapper">			
+				<!---------- Button ---------->
+				<button type="button" class="btn btn-primary center-block" data-toggle="modal" data-target="#info">About me.</button>
+					<div class="modal fade" id="info">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3>About Me</h3>
+								</div>
+								<div class="modal-body">
+									<p>
+										Hi. </br> 
+										My name is Kristina Valkova and I wish to make a career in Web Front-End Development.<br />
+										I've been learning how to create Websites since January 2014.
+										I've learned a lot along the way - not just about developing Web Sites,
+										but about programming in general. <br />
+										Now I'm trying to create responsive websites using Bootstrap 3.
+									</p>
+								</div>
+								
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------End of Button ---------->
+					<hr></hr>
+					
+					<ul class="sidebar-nav">
+						<h4 class="sidebar-brand"><a href="#">Home</a></h4>
+						<li><a href="#">Link</a></li>
+						<li><a href="#">Another Link</a></li>
+						<li><a href="#">Next Link</a></li>
+						<li><a href="#">Next Link</a></li>
+						<li><a href="#">Next Link</a></li>
+						<li><a href="#">Next Link</a></li>
+						<li><a href="#">Last Link</a></li>
+					</ul>
+			</div>
+		</div>
+		<!------- End Of Sidebar ------->
+	</div>
+				
+<!-------- Gallery ---------->
+
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h2>Halkidiki, Greece - The perfect break</h2>
+						<hr></hr>
+						<p class="text-justify">
+							Why go? For its heart-stopping beauty and fabled hospitality. Halkidiki's trident of forested peninsulas – Kassandra, 
+							Sithonia and Athos – form more than 300 miles of white-sand coastline that dip into a crystalline Aegean, so it was only a 
+							matter of time before the birthplace of Aristotle attracted more than toothbrush-wielding archaeologists, or monastic types 
+							en route to Mount Athos. However, unlike the Greek islands, relatively restrained development has left Halkidiki largely unspoilt. 
+							It is also at its best during spring. Temperatures are already nudging 20C, the sea is warm enough to swim in, and the hills 
+							are covered in a glorious display of wild flowers.
+						</p>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<h2>Thassos, Greece - The Pearl of Aegean Sea</h2>
+						<hr></hr>
+						<p class="text-justify">
+							 Is there anything better than whiling away the day on a gorgeous beach…on a tranquil island…with the sun high in the sky? 
+							 We think not! For many of us, a great beach is the reason we choose our Summer holiday destination – it’s often more 
+							 important than the hotel we’re kipping in at night. And for good reason! With up to 12 hours of sunshine per day during 
+							 high season, the beach is where we’ll spend the majority of our time, and make those much cherished holiday memories.
+							Thassos’ beaches are many and varied – with long sandy stretches and quiet coves to suit every kind of holidaymaker, 
+							young or old, coupled-up or with the family.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h2>Best Beaches in Crete Island</h2>
+						<hr></hr>
+						<p class="text-justify">
+							Information about the Beaches in Crete island, in Greece but also information about beaches in many locations of the island: 
+							Crete is the largest island of Greece and its coastline of 1,046 m (650 miles) provides hundreds of beautiful beaches. 
+							Located between the southern side of Aegean Sea and the northern side of the Libyan Sea, Crete gets very popular in summer due 
+							to the gorgeous beaches, the traditional lifestyle of the locals and the beautiful nature. 
+							Among the most exotic sandy Crete beaches is Balos, a wonderful place in Chania with crystal Caribbean-like water. 
+							This place amazes visitors with the stunning natural beauty. Another of the most beautiful beaches of Crete is the exotic 
+							beach of Elafonissi in Chania, on the westernmost spot of Crete, as well as the long, sandy beach of Falassarna. Finding a 
+							perfect beach is not a problem for visitors, as there are nice clean beaches in Crete all around the island. Some Crete beaches 
+							are organized and others are secluded, but all are clean.
+						</p>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<h2>Best Beaches in Mexico</h2>
+						<hr></hr>
+							<p class="text-justify">
+								Mexico has a multitude of beach destinations, some which were Mexican towns which gradually gained popularity as tourist 
+								destinations and others which were conceived as resort towns from the outset. These popular Mexico beach destinations offer 
+								powdery sand and crystalline water along with an abundance of tourist amenities and attractions.
+								If you'd rather spend your beach vacation somewhere that's just as gorgeous but not so crowded, you may prefer to visit one 
+								of Mexico's less well-known beach destinations: Mexico's Secret Beaches.
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h2>Bora Bora Beaches...</h2>
+						<hr></hr>
+						<p class="text-justify">
+							Dreaming of a tropical vacation on Bora Bora beaches? Imagine glimmering, turquoise, lagoon water...for as far as your peripheral 
+							vision can see. Surround it with white sandy beaches, fringed by a ring of vivid green, palm studded motus.
+							Turn around 180 degrees. More electric blue, calm water, edged by powdery white beaches. And behind them, rising mysteriously 
+							out of the sand...exotic Bora Bora Island.
+							When I first showed my Bora Bora photos to friends, everyone asked me if they had been 'photo-shopped.' The answer is 'No'.
+							The water really is that color, only better, when you are there!
+							The vivid shades of emerald, turquoise, azure and royal blue are mesmerizing! The beaches here are even more beautiful than 
+							pictures can convey. They are the reason I have become a Bora Bora Island addict.
+						</p>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<h2>There's A Glow-In-The-Dark Beach In The Maldives.</h2>
+						<hr></hr>
+							<p class="text-justify">
+								Taiwanese photographer William Ho was able to catch these phenomenal images on a recent honeymoon trip -- and we're so glad he did.
+								Ho was traveling through Mudhdhoo Island, and these particular photos were captured during his stay at luxury resort Dusit Thani.
+								Cornell biology professor James Morin tells The Huffington Post that the organisms creating the glow in the Maldives are in fact 
+								"ostracod crustaceans" although they've been commonly mistaken for phytoplankton.
+								Morin further explains that these ostracods emit light for a longer time than the organisms previously believed to be in the 
+								photos, bioluminescent phytoplankton. While phytoplankton emits light for no more than a second, usually when something comes 
+								into contact with the water, ostraccods emit light for seconds to even a minute or longer.
+								The sight of thousands of glowing specks scattered along the beach's sand is believed to be a mass mortality of these organisms 
+								that periodically occurs in the Maldives.
+							</p>
+					</div>
+				</div>
+	
+</div>
+<!---------- End of Main Content ---------->
+
+	<!--------- Footer ---------->
+
+     <div id="socialIcons" class="panel-footer col-md-12">
+		<div class="col-md-4 col-md-offset-5">
+			<ul class="list-inline">
+				<li> <a href="https://www.facebook.com/Krissy135" id="facebook" target="_blank"> <i class="fa fa-facebook-square fa-2x"> </i></a></li>
+				<li> <a href="https://github.com/cocoa1123" id="github" target="_blank"> <i class="fa fa-github fa-2x"> </i> </a> </li>
+				<li> <a href="https://www.linkedin.com/profile/view?id=386163268&trk=nav_responsive_tab_profile_pic" id="linkedin" target="_blank"> 
+					<i class="fa fa-linkedin-square fa-2x"></i> </a> </li>
+				<li> <a href="https://plus.google.com/u/0/102626922564967432885/posts" id="google" target="_blank"> <i class="fa fa-google-plus-square fa-2x"> </i> </a> </li>
+			</ul>
+		</div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
