@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>To Do Manager</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!---- Bootstrap 3 ---->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <!---- Font Awesome ---->
+		<link rel="stylesheet" href="style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="script/script.js"></script>
+</head>
+    
+<body>
+	<div class="container">
+	
+		<!------ Add Button ------>
+		
+		<div class="row">
+			<button type="button" class="btn btn-success btn-lg" id="addBtn">Add</button>
+		</div>
+		<div class="row">
+			<div class="col-md-12"></div>
+		</div>
+		
+		<div class="alert alert-success"  id="success">
+			<p class="text-center text-success" id="item">
+				The item has been successfully saved.
+				<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</p>
+		</div>
+			
+		<!------ Form Group ------>
+		<div class="form">
+			<form role="form">
+				<div class="alert alert-info" id="newItem">
+					<div class="col-md-4">
+						<p class="text-primary">
+							<b>New Item / Item [Name]</b>
+						</p>
+					</div>
+					<div class="col-md-offset-11">
+						<button type="button" class="btn btn-success" id="saveBtn" onclick="addPerson()">Save</button>
+					</div>
+				</div>
+					
+				<div class="form-group">
+					<div class="row">
+						<div class="col-sm-4">
+							<label class="col-sm-4 control-label" for="name">Name</label>
+						</div>
+						<div class="col-sm-4">
+							<label class="col-sm-2 control-label" for="inputSurname">Surname</label>
+						</div>
+						<div class="col-sm-4">
+							<label class="col-sm-2 control-label" for="inputAge">Text</label>
+						</div>
+					</div>
+				
+					<div class="row">
+						<div class="col-sm-4">
+							<input class="form-control" type="text" id="name" value=""></input>
+						</div>
+						<div class="col-sm-4">
+							<input class="form-control" type="text" id="familyName" value=""></input>
+						</div>
+						<div class="col-sm-4">
+							<input class="form-control" type="text" id="age" value="">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+						
+		<!------ Table ------>
+		
+		<table class="table" id="table">
+			<thead>
+				<tr class="row">
+				<hr></hr>
+					<th class="col-md-3">Name</th>
+					<th class="col-md-3">Family</th>
+					<th class="col-md-3">Age</th>
+					<th class="col-md-3 text-right">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="row">
+					<td class="col-md-3">Jennifer Pinsker</td>
+					<td class="col-md-3">John Boo</td>
+					<td class="col-md-3">23</td>
+					<td class="col-md-6 text-right">
+						<button type="button" class="btn btn-info btn-xs">Edit</button>
+						<button type="button" class="btn btn-danger btn-xs">Delete</button>
+					</td>
+				</tr>
+				<tr class="row">
+					<td class="col-md-3">Bob Robson</td>
+					<td class="col-md-3">Michael Robinson</td>
+					<td class="col-md-3">25</td>
+					<td class="col-md-6 text-right">
+						<button type="button" class="btn btn-info btn-xs">Edit</button>
+						<button type="button" class="btn btn-danger btn-xs">Delete</button>
+					</td>
+				</tr>
+				<tr class="row">
+					<td class="col-md-3">Michael Robinson</td>
+					<td class="col-md-3">Alexander Robson</td>
+					<td class="col-md-3">30</td>
+					<td class="col-md-6 text-right">
+						<button type="button" class="btn btn-info btn-xs">Edit</button>
+						<button type="button" class="btn btn-danger btn-xs">Delete</button>
+					</td>
+				</tr>
+				<tr class="row">
+					<td class="col-md-3">Jennifer Pinsker</td>
+					<td class="col-md-3">Jennifer Pinsker</td>
+					<td class="col-md-3">18</td>
+					<td class="col-md-6 text-right">
+						<button type="button" class="btn btn-info btn-xs">Edit</button>
+						<button type="button" class="btn btn-danger btn-xs">Delete</button>
+					</td>
+				</tr>
+				<tr class="row">
+					<td class="col-md-3">John Boo</td>
+					<td class="col-md-3">Bob Robson</td>
+					<td class="col-md-3">36</td>
+					<td class="col-md-6 text-right">
+						<button type="button" class="btn btn-info btn-xs">Edit</button>
+						<button type="button" class="btn btn-danger btn-xs">Delete</button>
+					</td>
+				</tr>
+				<tr class="row">
+					<td class="col-md-3">Michael Robinson</td>
+					<td class="col-md-3">Michael Robinson</td>
+					<td class="col-md-3">32</td>
+					<td class="col-md-6 text-right">
+						<button type="button" class="btn btn-info btn-xs">Edit</button>
+						<button type="button" class="btn btn-danger btn-xs">Delete</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
