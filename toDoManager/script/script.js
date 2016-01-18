@@ -1,71 +1,90 @@
-	
-	$(document).ready(function(){
-		// Hide - Show Form
-		$("form").hide();
-		$("#addBtn").on("click", function(){
-			$("form").show();
-			});
-		$("#saveBtn").on("click", function(){
-			$("form").hide();
-			});
-			
-		// Hide alert box
-		$('#success').hide();
+
+	// Get value from Input
+	function addPerson(){
+		var name = $('#name').val();
+		var surname = $('#surname').val();
+		var age = $('#age').val();
+		
+		if(name.length === 0 || surname.length === 0 || age.length === 0){
+			$('#success').removeClass('alert-success').addClass('alert-danger').html("Please fill in all fields!").show();
+			return;
+		};
+
+		// Append new table row
+		$('#table > tbody').append('<tr class="row"><td class="col-md-3 name">'+name+'</td><td class="col-md-3 surname">'+surname+'</td><td class="col-md-3 age">'+age+'</td><td class="col-md-6 text-right"><button type="button" class="btn btn-info btn-xs" onclick="editData(this)">Edit</button> <button type="button" class="btn btn-danger btn-xs"  onclick="removeData(this)">Delete</button></td></tr>');
 		
 		// Clear Inputs
 		$('#name').val("");
-		$('#familyName').val("");
+		$('#surname').val("");
 		$('#age').val("");
 		
-		//Show success alert
-		$('#saveBtn').click(function(){
-			$('#success').show().delay(2000).fadeOut();
-		});	
+		$('.form').slideToggle();
 		
-
-	});
+		$('#success').removeClass('alert-danger').addClass('alert-success').html("Successfully updated").show();
+		setTimeout(function(){
+			$('#success').hide();
+		}, 2500);
+	};
 	
-	function addPerson(){
-		// Get value from Input
+	var currentRow;
+	
+	//Delete Button
+	function removeData(del) {
+		$(del).parent().parent().remove();
+	};
+	
+	//Update Person
+	function updatePerson() {
+		
+		$('#update').hide();
+		$('#saveBtn').show();
+		
 		var name = $('#name').val();
-		var surname = $('#familyName').val();
+		var surname = $('#surname').val();
 		var age = $('#age').val();
 		
-		// Append new table row
-		$('#table > tbody').append('<tr class="row"><td class="col-md-3">'+name+'</td><td class="col-md-3">'+surname+'</td><td class="col-md-3">'+age+'</td><td class="col-md-6 text-right"><button type="button" class="btn btn-info btn-xs">Edit</button> <button type="button" class="btn btn-danger btn-xs">Delete</button></td></tr>');
+		currentRow.find(".name").html(name);
+		currentRow.find(".surname").html(surname);
+		currentRow.find('.age').html(age);
+
+		$('#name').val("");
+		$('#surname').val("");
+		$('#age').val("");
+		
+		$('.form').hide();
+
 	};
-
-	
-				//Change alert class
-			/*function loadMessage(isSuccess){
-				if (!isSuccess){
-					$('#success').removeClass('alert-success').addClass('alert-danger').show(); 
-					return;
-				}
-				$('#success').removeClass('alert-danger').addClass('alert-success').show();
-			}
-			
-			function saveBtn(){
-				var name = $('#name').val();
-				if(name.length === 0){
-					loadMessage(false);
-					return;
-				}
-				$('#table > tbody').prepend('...')
-				loadMessage(true);
-			}*/
-
-	
 	
 
+	//Edit Button
+	function editData(edit) {
+		$('#saveBtn').hide();
+		$('#update').show();
+		$('.form').show();
+		
+		var trObj = $(edit).parent().parent();
+		var name = trObj.find(".name").html();
+		var surname = trObj.find(".surname").html();
+		var age = trObj.find('.age').html();
+		
+		currentRow = trObj;
+		
+		$('#name').val(name);
+		$('#surname').val(surname);
+		$('#age').val(age);	
+				
+	};
+	
 
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
